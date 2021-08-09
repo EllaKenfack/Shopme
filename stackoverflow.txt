@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/52813704/connect-to-mssql-from-spring-boot-application-using-windows-authentication
+
+https://springframework.guru/configuring-spring-boot-for-microsoft-sql-server/
+
