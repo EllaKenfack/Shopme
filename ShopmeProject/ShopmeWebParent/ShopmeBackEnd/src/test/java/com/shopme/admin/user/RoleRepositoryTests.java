@@ -14,7 +14,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace=Replace.NONE)
-@Rollback(false)
+@Rollback(false) //directly commit to database during tests
 public class RoleRepositoryTests {
 
     @Autowired
