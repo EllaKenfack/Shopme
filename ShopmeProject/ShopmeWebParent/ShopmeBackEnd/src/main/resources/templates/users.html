@@ -7,6 +7,8 @@
     <title>Home - Shopme Admin </title>
 
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/fontawesome/style.css}"/>
     <script type="text/javascript" th:src="@{webjars/jquery/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
@@ -112,19 +114,26 @@
                 <th>Enabled</th>
                 <th></th>
             </tr>
+            </thead>
             <tbody>
                 <tr th:each="user : ${listUsers}">
                     <td>[[${user.id}]]</td>
-                    <td></td>
+                    <td><i class="fa-solid fa-image-portrait fa-2x" style="color:silver"></i></td>
                     <td>[[${user.email}]]</td>
                     <td>[[${user.firstName}]]</td>
                     <td>[[${user.lastName}]]</td>
                     <td>[[${user.Roles}]]</td>
-                    <td>[[${user.enabled}]]</td>
-                    <td> Edit &nbsp; Delete</td>
+                    <td>
+                        <a th:if="${user.enabled==true}" class="fa-solid fa-circle-check fa-2x" style="color:green"></a>
+                        <a th:if="${user.enabled==false}" class="fa-solid fa-circle-check fa-2x" style="color:grey"></a>
+                    </td>
+                    <td>
+                        <a class="fa-solid fa-pen-to-square fa-2x" style="color:green"></a> &nbsp;
+                        <a class="fa-solid fa-person-circle-minus fa-2x" style="color:red"></a>
+                    </td>
                 </tr>
             </tbody>
-            </thead>
+
         </table>
 
     </div>
