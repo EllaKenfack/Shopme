@@ -128,7 +128,8 @@
                         <a th:if="${user.enabled==false}" class="fa-solid fa-circle-check fa-2x" style="color:grey"></a>
                     </td>
                     <td>
-                        <a class="fa-solid fa-pen-to-square fa-2x" style="color:green"></a> &nbsp;
+                        <a class="fa-solid fa-pen-to-square fa-2x" style="color:green"
+                           th:href="@{'/users/edit/' + ${user.id}}" title="Edit this user"></a> &nbsp;
                         <a class="fa-solid fa-person-circle-minus fa-2x" style="color:red"></a>
                     </td>
                 </tr>
